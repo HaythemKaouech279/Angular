@@ -1,0 +1,55 @@
+
+
+<div style="display: flex;flex-direction: row; margin-top: 10px;">
+<app-carte-visite  [cv]=this.newcv></app-carte-visite>
+
+    
+                <div class="form-content">
+                    <div class="form-items">
+                        
+                        <form class="requires-validation" novalidate>
+
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="name" placeholder="Name" [(ngModel)]="this.newcv.name">
+                               <div class="valid-feedback">name field is valid!</div>
+                               <div class="invalid-feedback">name field cannot be blank!</div>
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="firstname" placeholder="First Name"  [(ngModel)]="this.newcv.firstName">
+                                <div class="valid-feedback">Firstname field is valid!</div>
+                                <div class="invalid-feedback">Firstname field cannot be blank!</div>
+                             </div>
+                             <div class="col-md-12">
+                                <input class="form-control" type="text" name="job" placeholder="Job"  [(ngModel)]="this.newcv.job">
+                                <div class="valid-feedback">Job field is valid!</div>
+                                <div class="invalid-feedback">Job field cannot be blank!</div>
+                             </div>
+                             <div class="col-md-12">
+                                <input class="form-control" type="text" name="path" placeholder="Path"  [(ngModel)]="this.newcv.url">
+                                <div class="valid-feedback">Path field is valid!</div>
+                                <div class="invalid-feedback">Path field cannot be blank!</div>
+                             </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       
+
+
+
+
+<script>(function () {
+    'use strict'
+    const forms = document.querySelectorAll('.requires-validation')
+    Array.from(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()</script>
