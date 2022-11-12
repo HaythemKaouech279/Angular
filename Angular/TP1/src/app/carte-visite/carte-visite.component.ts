@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CV } from '../cv-model';
+import { EmbaucheService} from '../embauche.service';
 
 @Component({
   selector: 'app-carte-visite',
@@ -14,8 +15,11 @@ export class CarteVisiteComponent implements OnInit {
     url:"",
   }
   
-  constructor() { }
-
+  constructor(private embacheService:EmbaucheService) { }
+  embaucher():void{
+    this.embacheService.embauchercv(this.cv);
+    console.log(this.embacheService.embaucheListe());
+  }
   ngOnInit(): void {
   }
 

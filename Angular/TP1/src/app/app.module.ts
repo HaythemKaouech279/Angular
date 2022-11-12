@@ -14,6 +14,8 @@ import { TrainingComponent } from './training/training.component';
 import { ListComponent } from './list/list.component';
 
 import { ItemComponent } from './item/item.component';
+import { ImagePipe } from './image.pipe';
+import { EmbauchedComponent } from './embauched/embauched.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ItemComponent } from './item/item.component';
         TrainingComponent,
         ListComponent,
    
-        ItemComponent
+        ItemComponent,
+            ImagePipe,
+            EmbauchedComponent
   ],
   imports: [
     BrowserModule,
