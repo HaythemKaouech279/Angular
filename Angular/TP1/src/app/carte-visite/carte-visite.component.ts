@@ -8,19 +8,17 @@ import { EmbaucheService} from '../embauche.service';
   styleUrls: ['./carte-visite.component.css']
 })
 export class CarteVisiteComponent implements OnInit {
-  @Input() cv:CV={
-    name:"",
-    firstName:"",
-    job:"",
-    url:"",
-  }
+  @Input() cv:CV|null=null;
   
   constructor(private embacheService:EmbaucheService) { }
   embaucher():void{
-    this.embacheService.embauchercv(this.cv);
+    if(this.cv){
+    this.embacheService.embauchercv({...this.cv}as CV);}
     console.log(this.embacheService.embaucheListe());
+    
   }
   ngOnInit(): void {
+
   }
 
 }

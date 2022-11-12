@@ -11,7 +11,7 @@ export class RainbowDirectiveDirective {
   @HostBinding('style.color') color = '';
   @HostBinding('style.border') border='';
 
-  @HostListener("input") logChange() {
+  @HostListener("input") logChange() {//onInput
     this.color=this.colors[Math.floor(Math.random()*6)];
     this.border="3px solid "+this.colors[Math.floor(Math.random()*6)];
   }

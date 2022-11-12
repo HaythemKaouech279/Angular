@@ -16,6 +16,8 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { ImagePipe } from './image.pipe';
 import { EmbauchedComponent } from './embauched/embauched.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { EmbauchedComponent } from './embauched/embauched.component';
     CvComponent,
     CarteVisiteComponent,
     FormCardComponent,
-   
+  
     ParentComponent,
         FilsComponent,
         TrainingComponent,
@@ -36,6 +38,9 @@ import { EmbauchedComponent } from './embauched/embauched.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    
     RouterModule.forRoot([
       
       {path: 'cv', component: CvComponent},

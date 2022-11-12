@@ -18,7 +18,8 @@ import { RainbowDirectiveDirective } from './rainbow-directive.directive';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
