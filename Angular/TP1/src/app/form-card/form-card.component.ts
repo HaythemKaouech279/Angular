@@ -9,6 +9,7 @@ import { CV } from '../cv-model';
 export class FormCardComponent implements OnInit {
  
  newcv:CV={
+  id:0,
   name :"", 
   firstName:"",
    job:"",

@@ -5,41 +5,40 @@
 
 
 
-    	
-    	    
-    		
-    		
-    		
-    		
-    		<!--Profile Card 3-->
-    		<div  style="width: 400px;"*ngIf="cv?.firstName!=''">
-    		    <div class="card profile-card-3">
-    		        <div class="background-block">
-    		            <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile-sample1" class="background"/>
-    		        </div>
-    		        <div class="profile-thumb-block">
-    		            <img src="{{cv?.url | image}}" alt="profile-image" class="profile"/>
-    		        </div>
-    		        <div class="card-content">
-                    <h2>{{cv?.name}}</h2>
-					<h2>{{cv?.firstName}}</h2>
-					<h2>{{cv?.job}}</h2>
-					
-                   
-					<div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
-					
-				</div>
 
-                </div>
-				
-				
-              
-				<button class="btn btn-success" (click)="embaucher()"   style="margin-left:150px ; margin-top: 20px;" >Embaucher</button>
-				<app-embauched></app-embauched>
-    		</div>
-    	
-    		
-    	
-			
 
-    
+
+
+
+
+<!--Profile Card 3-->
+<div style="width: 400px; margin-top: 20px;" *ngIf="cv?.firstName!=''">
+	<div class="card profile-card-3">
+		<div class="background-block">
+			<img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+				alt="profile-sample1" class="background" />
+		</div>
+		<div class="profile-thumb-block">
+			<img src="{{cv?.url | image}}" alt="profile-image" class="profile" />
+		</div>
+		<div class="card-content">
+			<h2>{{cv?.name}}</h2>
+			<h2>{{cv?.firstName}}</h2>
+			<h2>{{cv?.job}}</h2>
+
+
+			<div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i
+						class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+
+		</div>
+
+	</div>
+
+
+
+	<button class="btn btn-success" (click)="embaucher()"
+		style="margin-left:90px ; margin-top: 20px 0 20px 0px;width: 100px;">Embaucher</button>
+	<button type="button" (click)="details()" class="btn btn-secondary"
+		style=" margin: 20px 0 20px 20px; width: 100px;">Details</button>
+	<app-embauched></app-embauched>
+</div>

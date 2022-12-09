@@ -11,6 +11,7 @@ export class ListComponent implements OnInit {
   @Output()exportEvent=new EventEmitter;
   
       @Output() outputCV :CV={
+        id:0,
         name :"", 
       firstName:"",
       job:"",

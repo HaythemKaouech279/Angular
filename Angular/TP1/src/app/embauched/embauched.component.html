@@ -1,7 +1,7 @@
-<div >
+<div>
     Embauched List
-    <span *ngFor="let cv of cvse" class="list-group-item">
-        
-        {{cv.name}} {{cv.firstName}}
-    </span>
+    <div *ngFor="let cv of cvse">
+
+        <app-item [inputcv]="cv"></app-item>
+    </div>
 </div>

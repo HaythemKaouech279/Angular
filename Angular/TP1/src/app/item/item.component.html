@@ -1,3 +1,6 @@
-<ul class="list-group">
-<li >{{inputcv?.name}} {{inputcv?.firstName}}</li>
+<ul class=" shadow p-3   rounded" style="margin: 10px 0px 0px 10px;">
+    <li>
+        <img src="{{inputcv?.url | image}}" alt="image" class="background" style="height: 50px;">
+        {{inputcv?.name}} {{inputcv?.firstName}}
+    </li>
 </ul>

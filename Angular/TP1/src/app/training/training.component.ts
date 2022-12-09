@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-training',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class TrainingComponent implements OnInit {
   color: string="red";
 
-  constructor() { }
+  constructor(private router:ActivatedRoute) { 
+    router.params.subscribe(params=>{this.color=params['color']})
+  }
   setDefaultColor(){
     this.color="white";
    }

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+
 import { AppComponent } from './app.component';
 import { CvComponent } from './cv/cv.component';
 import { RouterModule } from '@angular/router';
@@ -18,6 +20,13 @@ import { ImagePipe } from './image.pipe';
 import { EmbauchedComponent } from './embauched/embauched.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { DetailCvComponent } from './detail-cv/detail-cv.component';
+import { ROUTING } from './app.rounting';
+import { AuthComponent } from './auth/auth.component';
+import { ImageLoopComponent } from './image-loop/image-loop.component';
+import { AddCvComponent } from './add-cv/add-cv.component';
 
 @NgModule({
   declarations: [
@@ -25,30 +34,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CvComponent,
     CarteVisiteComponent,
     FormCardComponent,
-  
+
     ParentComponent,
-        FilsComponent,
-        TrainingComponent,
-        ListComponent,
-   
-        ItemComponent,
-            ImagePipe,
-            EmbauchedComponent
+    FilsComponent,
+    TrainingComponent,
+    ListComponent,
+    AddCvComponent,
+    ItemComponent,
+    ImagePipe,
+    EmbauchedComponent,
+    NavbarComponent,
+    RouterSimulatorComponent,
+    AuthComponent,
+    ImageLoopComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    
-    RouterModule.forRoot([
-      
-      {path: 'cv', component: CvComponent},
-      {path: 'cartevisite', component: FormCardComponent },
-      {path: 'parent', component: ParentComponent },
-      {path: 'training', component: TrainingComponent },
-    ])
-  ],
+    FormsModule,
+    ROUTING],
   providers: [],
   bootstrap: [AppComponent]
 })
